@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mixture Browser</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    #browser {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    #tab-bar {
+      display: flex;
+      background: #f1f1f1;
+      border-bottom: 1px solid #ccc;
+      padding: 4px;
+    }
+
+    .tab {
+      padding: 8px 16px;
+      margin-right: 4px;
+      background: white;
+      border-radius: 6px 6px 0 0;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    .tab.active {
+      background: #e1e1e1;
+    }
+
+    #address-bar {
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      background: #f9f9f9;
+      border-bottom: 1px solid #ccc;
+    }
+
+    #address-bar input {
+      flex-grow: 1;
+      padding: 8px;
+      margin-right: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    #viewport {
+      flex-grow: 1;
+      padding: 16px;
+      background: #ffffff;
+      overflow: auto;
+    }
+
+    #status-bar {
+      height: 24px;
+      background: #f1f1f1;
+      padding: 4px;
+      font-size: 12px;
+      text-align: center;
+      color: #666;
+    }
+
+    .error-page {
+      text-align: center;
+      padding: 50px;
+    }
+
+    .error-page h1 {
+      font-size: 96px;
+      margin: 0;
+      color: #d32f2f;
+    }
+
+    .error-page p {
+      font-size: 24px;
+      margin: 16px 0;
+    }
+
+    .error-page button {
+      padding: 10px 20px;
+      background: #d32f2f;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="browser">
+    <div id="tab-bar">
+      <div class="tab active">New Tab</div>
+    </div>
+    <div id="address-bar">
+      <button id="back-btn">⬅</button>
+      <button id="forward-btn">➡</button>
+      <button id="refresh-btn">🔄</button>
+      <input type="text" id="url-bar" placeholder="Enter URL">
+      <button id="go-btn">Go</button>
+    </div>
+    <div id="viewport"></div>
+    <div id="status-bar">Ready</div>
+  </div>
+
+  <script src="mixture.js"></script>
+</body>
+</html>
