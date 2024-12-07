@@ -1,2 +1,3 @@
-# mixture
-web browser inside a web browser with it's own pipelines
+# mixture engine
+a browser engine meant to be inside a web browser with its own pipelines
+
